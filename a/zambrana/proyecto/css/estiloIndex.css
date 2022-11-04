@@ -1,0 +1,93 @@
+body {
+	background-color: #000000 
+}
+
+#carousel-lpz div div img{
+	width: 100%;
+}
+
+nav.navbar{
+	background-color: #00FFFC
+}
+.navbar navbar-default ul.navbar-nav li a{
+	color: white;
+
+}
+#verPaquetes{
+	background-color:#00D8FF 
+}
+#modificar{
+	background-color: #B4FF00
+}
+#eliminar{
+
+	background-color:#00F9B0
+}
+.jumbotron{
+    background-color: black;
+    color: white;
+    opacity: .8;
+    }
+ .container #yas{
+ 	color: white;
+ 	size: cover;
+	background-image: url('../nikev.png');
+	background-size: cover;
+}
+#rolo{
+	background-color:#6F8A84 
+}		
+#fpaquete{
+	background-color:#6F8A84 
+}
+#btn{
+	background-color: #0B8A89
+}
+#asd{
+background-color: #537C75
+}
+#losa{
+	background-color: #00E3F1
+}
+#wer{
+	background-color: #137283
+}
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+
+}
+.social {
+	position: fixed;
+	left: 0; 
+	top: 200px; 
+	z-index: 2000; }
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #FF8A00;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; 
+	}
+ 
+	.social ul li .icon-facebook {background:#3b5998;} 
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-google-plus {background: #d95232;}
+	.social ul li .icon-pinterest {background: #ae181f;}
+	.social ul li .icon-mail {background: #666666;}
+ 
+	.social ul li a:hover {
+		background: #000; 
+		padding: 10px 30px; 
+	}

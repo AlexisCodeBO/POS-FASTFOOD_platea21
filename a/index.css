@@ -1,0 +1,71 @@
+ *{
+
+font-family: 'Chela One', cursive;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-shadow: 1px 2px #1000;
+
+}
+
+
+
+ #carousel-tur .carousel-inner img {
+	width: 100%;
+}
+header div img {
+	width: 150px;
+	height: 150px;
+}
+
+body {  
+        background-image:url('cap/fondoo.jpg');
+	background-size: cover;
+	padding: .5em 3em;
+	background-color: 	#568196;
+
+	
+}
+.container {
+	background-color: 	#56819;
+}
+
+
+
+ social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ .social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+ 
+	.social ul li .icon-facebook {background: #0C1368;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-google-plus3 {background: #ae181f;}
+	.social ul li .icon-youtube {background: #d95232;}
+	.social ul li .icon-appleinc{background: #666666;}
+ 
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}

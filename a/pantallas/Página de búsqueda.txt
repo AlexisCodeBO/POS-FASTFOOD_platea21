@@ -1,0 +1,28 @@
+<?php
+	  $busqueda=$_GET["buscar"];
+	  require('conexion_bd.php');
+	  $conexion=mysqli_connect($db_host, $db_usuario, $db_contra);
+	  if(mysqli_connect_errno(){
+	  echo "Fallo al conectar con la BD";
+	  exit();
+	  }
+	  mysqli_select_db($conexion, $db_nombre) or die("No se encuentra la
+	   					BD");
+	  mysqli_set_charset($conexion, "utf-8");
+	  
+	  
+	  $consulta="SELECT *FROM CLIENTES WHERE appaterno='$busqueda'";
+	  $resultados=mysqli_query($conexion, $consulta);
+	  
+	  while($fila=mysqli_fetch_array($resultados, $MYSQL_ASSOC)){
+	  echo "<table><tr><td>";
+	  echo $fila["id_cliente"]."</td><td>";
+	  echo $fila["appaterno"]."</td><td>";
+	  echo $fila["apmaterno"]."</td><td>";
+	  echo $fila["direccionc"]."</td><td>";
+	  echo $fila["telefonoc"]."</td><td>";
+	  echo $fila["reservan"]."</td><td></tr></table>";
+
+	  echo "<br>";
+	  }
+	  ?>

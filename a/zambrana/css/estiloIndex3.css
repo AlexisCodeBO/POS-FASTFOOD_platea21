@@ -1,0 +1,50 @@
+body {
+background-image: url('../21.jpg');
+}
+
+#carousel-lpz div div img{
+	width: 100%;
+}
+
+nav.navbar{
+	background-color: #E4FF00
+}
+.navbar navbar-default ul.navbar-nav li a{
+	color: white;
+
+}
+#verPaquetes{
+	background-color:#00D8FF 
+}
+#modificar{
+	background-color: #B4FF00
+}
+#eliminar{
+
+	background-color:#00F9B0
+}
+ .container #as{
+ 	color: white;
+ 	size: cover;
+ 	background-color: ##FF0000;
+	background-size: cover;
+}
+.container #los{
+ 	color: white;
+ 	size: cover;
+	background-image: url('../.jpg');
+	background-size: cover;
+}
+.container #mas{
+ 	color: white;
+ 	size: cover;
+	background-image: url('../.jpg');
+	background-size: cover;
+}
+.container #mas{
+ 	color: white;
+ 	size: cover;
+	background-color: #00D2FF
+	background-size: cover;
+}
+.

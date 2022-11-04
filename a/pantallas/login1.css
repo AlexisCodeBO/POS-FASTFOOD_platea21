@@ -1,0 +1,24 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Rockwell;
+}
+#login{
+	margin: 0 auto;
+}
+body{
+	background-image: url('imagenes/caballopai.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+header{
+	float:right;
+	font-size: 10pt;
+	float:center;
+	list-style: none;
+	color: white;
+}
+footer{
+	border-radius: 10px;
+	background-color: #EA8B3E;
+}

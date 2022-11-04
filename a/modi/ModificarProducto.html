@@ -1,0 +1,161 @@
+<?PHP
+          $Cod_Producto=$_GET["Cod_Producto"];
+          include("Conexion.php");
+		  if(isset($_GET["Modificar"]))
+		  {
+		      /*$Nombre          =$_GET["Nombre"];
+			  $UnidadMedida=$_GET["UnidadMedida"];
+			  $Ganancia       =$_GET["Ganancia"];*/
+			  $Tipo=$_GET["Tipo"];
+			  $SubTipo=$_GET["SubTipo"];
+			  $Material =$_GET["Material"];
+			  $Color =$_GET["Color"];
+			  $Talla=$_GET["Talla"];
+			  $Marca =$_GET["Marca"];
+			  $Cod_Proveedor  =$_GET["Cod_Proveedor"];
+			  $Usuario=$_GET["Usuario"];
+			  $Cod_Compra =$_GET["Cod_Compra"];
+			  $PrecioCompra  =$_GET["PrecioCompra"];
+			  $PrecioVenta=$_GET["PrecioVenta"];
+			  $PrecioFinal=$_GET["PrecioFinal"];
+			  $Estado =$_GET["Estado"];
+			  $FechaAlta=$_GET["FechaAlta"];
+			  $FechaVenta =$_GET["FechaVenta"];
+		      $SQL1= "UPDATE Producto SET Tipo = '$Tipo', SubTipo = '$SubTipo', Material = '$Material', Color= '$Color', Talla='$Talla', 
+			  Marca= '$Marca', Cod_Proveedor= $Cod_Proveedor, Usuario= '$Usuario', Cod_Compra= $Cod_Compra ,PrecioCompra= $PrecioCompra,			              PrecioVenta= $PrecioVenta, PrecioFinal= $PrecioFinal, Estado= '$Estado', FechaAlta= '$FechaAlta', FechaVenta='$FechaVenta'";
+			  $SQL2=" WHERE Cod_Producto = $Cod_Producto ";
+		      $SQLT= $SQL1.$SQL2;
+			  //echo $SQLT;
+			  $Puntero2 = mysqli_query($Conexion,$SQLT);
+			  header("Location: AdmProducto.php");
+		  }
+ 	      $SQL1=" SELECT * ";
+		  $SQL2=" FROM Producto";
+		  $SQL3="  WHERE Cod_Producto = ".$Cod_Producto;
+		  $SQLT= $SQL1.$SQL2.$SQL3;
+		  //echo $SQLT;
+		  $Puntero1 = mysqli_query($Conexion,$SQLT);
+		  if($Registro = mysqli_fetch_row($Puntero1))
+		  { 
+		     /*$Nombre=$Registro[1];
+			 $UnidadMedida=$Registro[2];
+			 $Ganancia=$Registro[3];*/
+			  $Tipo=$Registro[1];
+			  $SubTipo=$Registro[2];
+			  $Material=$Registro[3];
+			  $Color=$Registro[4];
+			  $Talla=$Registro[5];
+			  $Marca=$Registro[6];
+			  $Cod_Proveedor=$Registro[7];
+			  $Usuario=$Registro[8];
+			  $Cod_Compra =$Registro[9];
+			  $PrecioCompra=$Registro[10];
+			  $PrecioVenta=$Registro[11];
+			  $PrecioFinal =$Registro[12];
+			  $Estado  =$Registro[13];
+			  $FechaAlta=$Registro[14];
+			  $FechaVenta =$Registro[15];
+		  } 
+ 
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="get" action="?">
+  <p>Modificiacion de productos</p>
+  <p>Codigo de Producto: <?PHP echo  $Cod_Producto; ?>
+    <input name="Cod_Producto" type="hidden" id="Cod_Producto" value="<?PHP echo  $Cod_Producto; ?>" />
+  </p>
+  <p>Tipo
+    <label>
+    <input name="Tipo" type="text" id="Tipo" value="<?PHP echo $Tipo; ?>" />
+    </label> 
+  </p>
+  <p>SubTipo
+    <label>
+    <input name="SubTipo" type="text" id="SubTipo" value="<?PHP echo $SubTipo; ?>" />
+    </label>
+  </p>
+  <p>Material
+    <label>
+    <input name="Material" type="text" id="Material" value="<?PHP echo $Material; ?>" />
+    </label>
+  </p>
+  <p>
+    <label>Color
+    <input name="Color" type="text" id="Color" value="<?PHP echo $Color; ?>" />
+    </label>
+</p>
+  <p>Talla
+    <label>
+      <input name="Talla" type="text" id="Talla" value="<?PHP echo $Talla; ?>" />
+    </label>
+  </p>
+  <p>Marca
+    <label>
+      <input name="Marca" type="text" id="Marca" value="<?PHP echo $Marca; ?>" />
+    </label>
+</p>
+  <p>Codigo Proveedor 
+    <label>
+    <input name="Cod_Proveedor" type="text" id="Cod_Proveedor" value="<?PHP echo $Cod_Proveedor; ?>" />
+    </label>
+</p>
+  <p>Usuario
+    <label>
+      <input name="Usuario" type="text" id="Usuario" value="<?PHP echo $Usuario; ?>" />
+    </label>
+  </p>
+  <p>Codigo Compra 
+    <label>
+      <input name="Cod_Compra" type="text" id="Cod_Compra" value="<?PHP echo $Cod_Compra; ?>" />
+    </label>
+  </p>
+  <p>Precio Compra
+    <label><input name="PrecioCompra" type="text" id="PrecioCompra" value="<?PHP echo $PrecioCompra; ?>" />
+    </label>
+</p>
+  <p>Precio Venta 
+    <label>
+      <input name="PrecioVenta" type="text" id="PrecioVenta" value="<?PHP echo $PrecioVenta; ?>" />
+    </label>
+  </p>
+  <p>Precio Final 
+    <label>
+      <input name="PrecioFinal" type="text" id="PrecioFinal" value="<?PHP echo $PrecioFinal; ?>" />
+    </label>
+</p>
+  <p>Estado
+    <label>
+    <input name="Estado" type="text" id="Estado" value="<?PHP echo $Estado; ?>" />
+    </label>
+</p>
+  <p>Fecha Alta 
+    <label>
+      <input name="FechaAlta" type="text" id="FechaAlta" value="<?PHP echo $FechaAlta; ?>" />
+    </label>
+  </p>
+  <p>FechaVenta
+    <label>
+      <input name="FechaVenta" type="text" id="FechaVenta" value="<?PHP echo $FechaVenta; ?>" />
+    </label>
+  </p>
+  <p>
+    <label>
+    <input name="Modificar" type="submit" id="Modificar" value="Modificar" />
+    </label>
+  </p>
+   <p>
+    <label>
+    <input name="volver" type="submit" id="volver" value="volver" />
+    </label>
+  </p>
+  <p>&boutique;</p>
+</form>
+</body>
+</html>
